@@ -1,0 +1,134 @@
+###1.Write a Python program to sum all the items in a list.
+
+def sum_list(items):
+    sum_numbers = 0
+    for x in items:
+        sum_numbers += x
+    return sum_numbers
+print(sum_list([1,2,8]))
+
+#output:-11
+
+###2.Write a Python program to multiplies all the items in a list.
+
+def multiply_list(items):
+    tot = 1
+    for x in items:
+        tot *= x
+    return tot
+print(multiply_list([1,2,8]))
+
+#output:-16
+
+###3.write a python program to get the largest and smallest number from a list.
+
+lst = []
+num = int(input('How many numbers: '))
+
+for n in range(num):
+    numbers = int(input('Enter number '))
+    lst.append(numbers)
+print("Maximum element in the list is :", max(lst), "\nMinimum element in the list is :", min(lst))
+
+#output:-How many numbers: 6
+#Enter number 56
+#Enter number 78
+#Enter number 23
+#Enter number 12
+#Enter number 98
+#Enter number 63
+#Maximum element in the list is : 98
+#Minimum element in the list is : 12
+
+###4.Write a Python program to remove duplicates from a list.
+
+a = [10,20,30,20,10,50,60,40,80,50,40]
+
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+
+print(dup_items)
+
+#output:-{40, 10, 80, 50, 20, 60, 30} 
+
+###5.Write a Python program to check a list is empty or not.
+
+def Enquiry(lis1): 
+	if len(lis1) == 0: 
+		return 0
+	else: 
+		return 1
+lis1 = [] 
+if Enquiry(lis1): 
+	print ("The list is not empty") 
+else: 
+	print("Empty List") 
+
+#output:-Empty List
+
+###6.Write a Python program to clone or copy a list
+
+original_list = [10, 22, 44, 23, 4]
+new_list = list(original_list)
+print(original_list)
+print(new_list)
+
+#output:-
+#[10, 22, 44, 23, 4]                                                        
+#[10, 22, 44, 23, 4]
+
+###7.Write a Python program to print a specified list after removing the 0th,4th,5th elements
+
+color= ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+color= [x for (i,x) in enumerate(color) if i not in (0,4,5)]
+print(color)
+
+#output:-['Green', 'White', 'Black']
+
+###8.Write a python program to print the numbers of a specified list after removing even number form it.
+
+list = [11, 22, 33, 44, 55]
+print ("Original list:")
+print (list)
+for i  in list:
+	if(i%2 == 0):
+	    list.remove(i)
+print ("list after removing EVEN numbers:")
+print (list)
+
+#output:-
+#Original list:
+#[11, 22, 33, 44, 55]
+#list after removing EVEN numbers:
+#[11, 33, 55]
+
+###9.Write a Python program to shuffle and print a specified list.
+
+from random import shuffle
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+shuffle(color)
+print(color)
+
+#output:-['Yellow', 'Pink', 'Green', 'Red', 'Black', 'White'] 
+
+###10.Write a Python program to get the difference between the two lists.
+
+def Diff(li1, li2): 
+	li_dif = [i for i in li1 + li2 if i not in li1 or i not in li2] 
+	return li_dif 
+li1 = [10, 15, 20, 25, 30, 35, 40] 
+li2 = [25, 40, 35,12] 
+li3 = Diff(li1, li2) 
+print(li3) 
+
+#output:-[10, 20, 30, 15,12]
+
+
+
+
+
+
